@@ -1,13 +1,24 @@
-import GridChange from "./components/GridChange.tsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.tsx"
+import Micro from "./pages/Micro.tsx";
+import Scroll from "./pages/Scroll.tsx";
 
-const App = () => {
+import Layout from "./layout.tsx";
+
+
+function App() {
     return (
-        <div className="text-black p-24">
-            <p>Heyy</p>
-            <GridChange/>
-        </div>
-        )
+        <Router>
+            <Routes>
+                <Route path ="/" element={<Layout/>} >
+                    <Route index element={<Home />} />
+                    <Route path="/micro" element={<Micro />} />
+                    <Route path="/scroll" element={<Scroll />} />
+                </Route>
 
+            </Routes>
+        </Router>
+    );
 }
 
-export default App
+export default App;
