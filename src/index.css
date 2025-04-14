@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fustat:wght@200..800&family=Instrument+Serif:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 :root {
     --bg-color: #ffffff;
@@ -9,13 +9,8 @@
 @theme{
     --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
     --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
-
 }
 
-*{
-    margin: 0;
-    padding: 0;
-}
 
 @media (prefers-color-scheme: light) {
     :root {
@@ -28,6 +23,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "DM Sans", sans-serif;
 }
 
 
